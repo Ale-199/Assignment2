@@ -9,23 +9,20 @@ let indexController = require('../controllers/index')
 /* GET home page. */
 router.get('/', indexController.home);
 
+// about page
+router.get('/about', indexController.about);
+
 
 //projects page
 router.get('/projects', indexController.project);
 
 
-// about page
-router.get('/about', function(req, res, next) {
-    res.render('index', { title: 'Projects' }); //respond render
-});
-
 // services page
-router.get('/services', function(req, res, next) {
-    res.render('index', { title: 'services' }); //respond render
-});
+router.get('/services', indexController.services);
 
 // Contact page
-router.get('/services', function(req, res, next) {
-    res.render('index', { title: 'contact' }); //respond render
-});
+router.get('/contact', indexController.contact);
+
+
+
 module.exports = router;

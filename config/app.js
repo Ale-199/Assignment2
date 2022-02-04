@@ -1,3 +1,8 @@
+// Author:Alejandro zhengzheng
+//Student ID: 301083081
+// Date:2022 - 02 -05
+
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -6,6 +11,7 @@ var logger = require('morgan');
 
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
+
 
 var app = express();
 
@@ -20,6 +26,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 
+
+//app use router
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
