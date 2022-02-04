@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlejandoZZ</title>
+    <!-- icon link -->
+    <link rel="icon" href="./images/favicon.ico">
+    <!-- CSS link -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!-- boostrop CSS link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- icon link from Font Awesome-->
+    <script src="https://kit.fontawesome.com/f914d78ba9.js" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Sacramento&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navigation part -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <img src="../public/images/logo.jpg" alt="" class="logo">
+                <a class="navbar-brand" href="homePage.html">Home</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutMe.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projectsPage.html">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicesPage.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactMe.html">Contact Me</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <a class="navbar-brand" href=""></a>
+        <img src="/images/logo.jpg" alt="logo">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <% if (title == "Home") { %>
+                    <a class="nav-link active" href="/">
+                        <% } else { %>
+                            <a class="nav-link" href="/">
+                                <% } %>
+                                    <i class="fas fa-home"></i> Home </a>
+                    </a>
+            </li>
+            <li class="nav-item">
+                <% if (title == "About Me") { %>
+                    <a class="nav-link active" href="/about">
+                        <% } else { %>
+                            <a class="nav-link" href="/about">
+                                <% } %>
+                                    <i class="fas fas fa-user"></i> About Me</a>
+                    </a>
+            </li>
+            <li class="nav-item">
+                <% if (title == "Project") { %>
+                    <a class="nav-link active" href="/project">
+                        <% } else { %>
+                            <a class="nav-link" href="/project">
+                                <% } %>
+                                    <i class="fas fa-project-diagram"></i> Project</a>
+                    </a>
+            </li>
+            <li class="nav-item">
+                <% if (title == "Services") { %>
+                    <a class="nav-link active" href="/services">
+                        <% } else { %>
+                            <a class="nav-link" href="/servicess">
+                                <% } %>
+                                    <i class="fas fa-user"></i> Services </a>
+                    </a>
+            </li>
+            <li class="nav-item">
+                <% if (title == "Contact") { %>
+                    <a class="nav-link active" href="/contact">
+                        <% } else { %>
+                            <a class="nav-link" href="/contact">
+                                <% } %>
+                                    <i class="fas fa-envelope-square"></i> contact </a>
+                    </a>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </nav>
