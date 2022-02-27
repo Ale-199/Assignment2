@@ -21,7 +21,7 @@ router.get('/projects', indexController.project);
 router.get('/services', indexController.services);
 
 // Contact page
-router.get('/contact', indexController.contact);
+router.get('/contactMe', indexController.contactMe);
 
 
 

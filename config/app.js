@@ -2,18 +2,19 @@
 //Student ID: 301083081
 // Date:2022 - 02 -05
 
-
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var indexRouter = require('../routes/index');
-var usersRouter = require('../routes/users');
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
 
 
-var app = express();
+//Get the route modules
+let indexRouter = require('../routes/index');
+let usersRouter = require('../routes/users');
+let businessListRouter = require('../routes/businessList');
+
+let app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
@@ -30,6 +31,8 @@ app.use(express.static(path.join(__dirname, '../node_modules')));
 //app use router
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/businessList', businessListRouter);
+
 
 
 // catch 404 and forward to error handler
