@@ -22,7 +22,7 @@ module.exports.displayUpdatePage = (req, res, next) => {
     let newItem = BusinessList();
 
     res.render('businessList/update', {
-        title: 'Update a new Item',
+        title: 'Update a new business contact list',
         item: newItem
     })
 }
