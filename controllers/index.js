@@ -4,21 +4,36 @@
 
 
 exports.home = function(req, res, next) {
-    res.render('home', { title: 'Home' });
+    res.render('home', {
+        title: 'Home',
+        userName: req.user ? req.user.username : ''
+    });
 }
 
 exports.about = function(req, res, next) {
-    res.render('about', { title: 'about' }); //respond render
+    res.render('about', {
+        title: 'about',
+        userName: req.user ? req.user.username : ''
+    }); //respond render
 }
 
 exports.project = function(req, res, next) {
-    res.render('projects', { title: 'Projects' });
+    res.render('projects', {
+        title: 'Projects',
+        userName: req.user ? req.user.username : ''
+    });
 }
 
 exports.services = function(req, res, next) {
-    res.render('services', { title: 'services' }); //respond render
+    res.render('services', {
+        title: 'services',
+        userName: req.user ? req.user.username : ''
+    }); //respond render
 }
 
 exports.contactMe = function(req, res, next) {
-    res.render('contactMe', { title: 'contactMe' }); //respond render
+    res.render('contactMe', {
+        title: 'contactMe',
+        userName: req.user ? req.user.username : ''
+    }); //respond render
 }

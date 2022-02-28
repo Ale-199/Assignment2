@@ -10,7 +10,8 @@ exports.businessContactList = function(req, res, next) {
                 //businessContactList is in the businessContact folder 
                 'businessList/businessContactList', {
                     title: 'Buinsess contact List',
-                    ContactList: contactList //the name of the object inside the ejs, the value that i want to pass is contactList
+                    ContactList: contactList, //the name of the object inside the ejs, the value that i want to pass is contactList
+                    userName: req.user ? req.user.username : ''
                 }
             );
         }
@@ -23,7 +24,8 @@ module.exports.displayUpdatePage = (req, res, next) => {
 
     res.render('businessList/update', {
         title: 'Update a new business contact list',
-        item: newItem
+        item: newItem,
+        userName: req.user ? req.user.username : ''
     })
 }
 
@@ -60,7 +62,8 @@ module.exports.displayEditPage = (req, res, next) => {
             //show the edit view
             res.render('businessList/update', {
                 title: 'Edit the contact list',
-                item: itemToEdit
+                item: itemToEdit,
+                userName: req.user ? req.user.username : ''
             })
         }
     });
