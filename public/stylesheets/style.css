@@ -187,3 +187,7 @@ img.selfImage {
     border-radius: 30px;
     margin-bottom: 8%;
 }
+
+.flash {
+    color: red;
+}

@@ -2,6 +2,9 @@
 //Student ID: 301083081
 // Date:2022 - 02 -05
 
+let User = require('../models/user');
+let passport = require('passport');
+
 exports.user = function(req, res, next) {
     res.render('user', {
         title: 'Users',
@@ -58,6 +61,7 @@ module.exports.renderSignup = function(req, res, next) {
 };
 
 module.exports.signup = function(req, res, next) {
+    //check if it already has a user, if it does not has it, execute the following code
     if (!req.user) {
         console.log(req.body);
 
@@ -71,7 +75,7 @@ module.exports.signup = function(req, res, next) {
 
                 req.flash('error', message);
                 // return res.redirect('/users/signup');
-                return res.render('auth/signup', {
+                return res.render('login/signup', {
                     title: 'Sign-up Form',
                     messages: req.flash('error'),
                     user: user
@@ -89,7 +93,7 @@ module.exports.signup = function(req, res, next) {
 
 module.exports.renderSignin = function(req, res, next) {
     if (!req.user) {
-        res.render('auth/signin', {
+        res.render('login/signin', {
             title: 'Sign-in Form',
             messages: req.flash('error') || req.flash('info')
         });
