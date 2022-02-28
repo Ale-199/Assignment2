@@ -1,7 +1,7 @@
 /* 
-Author:Alejandro zhengzheng
-Student ID: 301083081
-Date:2022 - 02 -05
+// Author:Alejandro zhengzheng
+//Student ID: 301083081
+// Date:2022 - 02 -28
  */
 
 console.log('Goes to the client side.');

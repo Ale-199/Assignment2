@@ -1,3 +1,7 @@
+// Author:Alejandro zhengzheng
+//Student ID: 301083081
+// Date:2022 - 02 -28
+
 const passport = require('passport');
 
 module.exports = function() {

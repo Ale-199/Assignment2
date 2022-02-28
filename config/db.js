@@ -1,3 +1,7 @@
+// Author:Alejandro zhengzheng
+//Student ID: 301083081
+// Date:2022 - 02 -28
+
 let DB_CONNECTION = "mongodb+srv://alejandro:1niVQhRy7CUK0tg8@cluster0.hjrjg.mongodb.net/lab2"
 
 // Database Setup
